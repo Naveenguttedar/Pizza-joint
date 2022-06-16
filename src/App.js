@@ -31,14 +31,17 @@ function App() {
       <Header />
       <Routes location={location} key={location.key}>
         <Route
+          exact
           path="/base"
           element={<Base addBase={addBase} pizza={pizza} />}
         />
         <Route
+          exact
           path="/toppings"
           element={<Toppings addTopping={addTopping} pizza={pizza} />}
         />
         <Route
+          exact
           path="/order"
           element={<Order pizza={pizza} modle={modle} showModle={showModle} />}
         />
