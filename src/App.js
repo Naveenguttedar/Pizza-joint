@@ -29,25 +29,21 @@ function App() {
   return (
     <>
       <Header />
-      <AnimatePresence exitBeforeEnter>
-        <Routes location={location} key={location.key}>
-          <Route
-            path="/base"
-            element={<Base addBase={addBase} pizza={pizza} />}
-          />
-          <Route
-            path="/toppings"
-            element={<Toppings addTopping={addTopping} pizza={pizza} />}
-          />
-          <Route
-            path="/order"
-            element={
-              <Order pizza={pizza} modle={modle} showModle={showModle} />
-            }
-          />
-          <Route path="/" element={<Home />} />
-        </Routes>
-      </AnimatePresence>
+      <Routes location={location} key={location.key}>
+        <Route
+          path="/base"
+          element={<Base addBase={addBase} pizza={pizza} />}
+        />
+        <Route
+          path="/toppings"
+          element={<Toppings addTopping={addTopping} pizza={pizza} />}
+        />
+        <Route
+          path="/order"
+          element={<Order pizza={pizza} modle={modle} showModle={showModle} />}
+        />
+        <Route path="/" element={<Home />} />
+      </Routes>
     </>
   );
 }
