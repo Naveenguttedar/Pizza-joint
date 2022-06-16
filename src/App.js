@@ -29,24 +29,26 @@ function App() {
   return (
     <>
       <Header />
-      <Routes location={location} key={location.key}>
-        <Route
+      <Switch location={location} key={location.key}>
+        <Switch
           exact
           path="/base"
-          element={<Base addBase={addBase} pizza={pizza} />}
+          component={<Base addBase={addBase} pizza={pizza} />}
         />
         <Route
           exact
           path="/toppings"
-          element={<Toppings addTopping={addTopping} pizza={pizza} />}
+          component={<Toppings addTopping={addTopping} pizza={pizza} />}
         />
         <Route
           exact
           path="/order"
-          element={<Order pizza={pizza} modle={modle} showModle={showModle} />}
+          component={
+            <Order pizza={pizza} modle={modle} showModle={showModle} />
+          }
         />
-        <Route path="/" element={<Home />} />
-      </Routes>
+        <Route path="/" component={<Home />} />
+      </Switch>
     </>
   );
 }
