@@ -3,7 +3,7 @@
   "version": "1.0.2",
   "description": "Lighter version of create-react-app",
   "main": "index.js",
-  "homepage": "https://Naveenguttedar.github.io",
+  "homepage": "https://Naveenguttedar.github.io/pizza-joint",
   "scripts": {
     "start": "webpack-dev-server --mode=development --open --hot",
     "build": "webpack --mode=production",
