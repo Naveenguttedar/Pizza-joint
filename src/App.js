@@ -47,7 +47,7 @@ function App() {
             <Order pizza={pizza} modle={modle} showModle={showModle} />
           }
         />
-        <Route path="/" component={<Home />} />
+        <Route path="/pizza-joint" component={<Home />} />
       </Switch>
     </>
   );
